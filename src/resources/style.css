@@ -1,0 +1,10 @@
+.root{
+    -fx-background-color:brown;
+}
+.knob{
+    -fx-knob-marker-color:grey;
+    -fx-knob-fill:green;
+    -fx-knob-stroke:black;
+    -fx-knob-tick-mark-color:yellow;
+}
+
