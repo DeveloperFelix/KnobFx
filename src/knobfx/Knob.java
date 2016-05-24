@@ -70,8 +70,6 @@ public class Knob extends Control{
             val = 0;
         }else if(val >= 50){
             val = 50;
-        }else{
-            val= val - 1;
         }
         valueProperty().setValue(val);
     }
