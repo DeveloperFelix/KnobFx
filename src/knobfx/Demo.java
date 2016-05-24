@@ -23,29 +23,21 @@ import javafx.util.Duration;
  */
 public class Demo extends Application {
     
-Random RND=new Random();
-int i=0;
-StackPane root=new StackPane();
-Timeline tl=new Timeline();
    
+
     @Override
     public void start(Stage primaryStage) throws InterruptedException {
-        
-        i=RND.nextInt(25);
-     
+
+        StackPane root=new StackPane();
+         
         Knob k=new Knob();
-        k.setPrefHeight(250);
-        k.setPrefWidth(250);
+        k.setPrefHeight(450);
+        k.setPrefWidth(450);
 
         root.getChildren().add(k);
-        
-        final KeyValue KEY_VALUE = new KeyValue(k.valueProperty(), 50, Interpolator.LINEAR);
-        final KeyFrame KEY_FRAME = new KeyFrame(Duration.seconds(20), KEY_VALUE);
-        tl.getKeyFrames().setAll(KEY_FRAME);
-        tl.play();
-
+ 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(this.getClass().getResource("/resources/style.css").toExternalForm());
+//        scene.getStylesheets().add(this.getClass().getResource("/resources/style.css").toExternalForm());
         primaryStage.setTitle("");
         primaryStage.setScene(scene);
         primaryStage.show();
